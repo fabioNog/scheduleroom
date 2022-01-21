@@ -1,0 +1,32 @@
+<%= form_with(model: reserf) do |form| %>
+  <% if reserf.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(reserf.errors.count, "error") %> prohibited this reserf from being saved:</h2>
+
+      <ul>
+        <% reserf.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :start_date, style: "display: block" %>
+    <%= form.date_field :start_date %>
+  </div>
+
+  <div>
+    <%= form.label :termination_date, style: "display: block" %>
+    <%= form.date_field :termination_date %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
