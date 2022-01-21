@@ -1,64 +1,65 @@
-<div id="app">
-    <section class="section">
-      <div class="container mt-5">
-        <div class="row">
-          <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
-            <div class="login-brand">
-              <%# <%= image_tag 'logo', alt:"logo", width:"100", class:"shadow-light rounded-circle"%> 
-              <%= image_tag("logo.png", alt:"logo", width:"100", class:"shadow-light rounded-circle") %>
+<body class="layout-2">
+ <div id="app">
+    <div class="main-wrapper container">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <a href="index.html" class="navbar-brand sidebar-gone-hide">
+          <%= image_tag("logo.png", alt:"logo", width:"50", class:"rounded-circle") %>
+        </a>
+        <div class="navbar-nav">
+          <a href="#" class="nav-link sidebar-gone-show" data-toggle="sidebar"><i class="fas fa-bars"></i></a>
+        </div>
+        <div class="nav-collapse">
+          <a class="sidebar-gone-show nav-collapse-toggle nav-link" href="#">
+            <i class="fas fa-ellipsis-v"></i>
+          </a>          
+        </div>
+        <form class="form-inline ml-auto">
+          
+        </form>
+        <ul class="navbar-nav navbar-right">
+
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+            <div class="d-sm-none d-lg-inline-block">Seja Bem-Vindo</div></a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a href="features-profile.html" class="dropdown-item has-icon">
+                <i class="far fa-user"></i> Criar Conta
+              </a>
+              <a href="features-activities.html" class="dropdown-item has-icon">
+                <i class="fas fa-bolt"></i> Entrar
+              </a>
             </div>
+          </li>
+        </ul>
+      </nav>
 
-            <div class="card card-primary">
-              <div class="card-header"><h4>Login</h4></div>
+     
 
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          
+
+          <div class="section-body">
+            <h2 class="section-title">Seja bem-Vindo a Sala de Reuniões</h2>
+            <div class="card">
+              <div class="card-header">
+                <h4>Sala de Reunião</h4>
+              </div>
               <div class="card-body">
-                <form method="POST" action="#" class="needs-validation" novalidate="">
-                  <div class="form-group">
-                    <label for="email">Email</label>
-                    <input id="email" type="email" class="form-control" name="email" tabindex="1" required autofocus>
-                    <div class="invalid-feedback">
-                      Please fill in your email
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <div class="d-block">
-                    	<label for="password" class="control-label">Password</label>
-                      <div class="float-right">
-                        <a href="auth-forgot-password.html" class="text-small">
-                          Forgot Password?
-                        </a>
-                      </div>
-                    </div>
-                    <input id="password" type="password" class="form-control" name="password" tabindex="2" required>
-                    <div class="invalid-feedback">
-                      please fill in your password
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <div class="custom-control custom-checkbox">
-                      <input type="checkbox" name="remember" class="custom-control-input" tabindex="3" id="remember-me">
-                      <label class="custom-control-label" for="remember-me">Remember Me</label>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4">
-                      Login
-                    </button>
-                  </div>
-                </form>
+                <p>Esta é uma aplicação teste para simular um ambiente de reservas de salas de reunião! Seja muito bem-vindo. 
+                <br>No canto superior
+                direito se encontra os links para se cadastrar e/ou logar, fique a vontade</p>
               </div>
             </div>
-            <div class="mt-5 text-muted text-center">
-              Você não tem uma conta? <a href="auth-register.html">Create One</a>
-            </div>
-            <div class="simple-footer">
-              Copyright &copy; Fabio Nogueira 2022
-            </div>
           </div>
-        </div>
+        </section>
       </div>
-    </section>
+      <footer class="main-footer">
+        <div class="footer-left">
+          Copyright &copy; 2022 <div class="bullet"></div> Desenhado Por <a href="https://github.com/fabioNog/scheduleroom" target="_blank">Fabio Nogueira do Carmo</a>
+        </div>      
+      </footer>
+    </div>
   </div>
+  </body>
