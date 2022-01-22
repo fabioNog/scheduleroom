@@ -5,8 +5,9 @@
         <div class="row">
           <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
             <div class="login-brand">
-              <%# <%= image_tag 'logo', alt:"logo", width:"100", class:"shadow-light rounded-circle"%> 
+              <a href="/">
               <%= image_tag("logo.png", alt:"logo", width:"100", class:"shadow-light rounded-circle") %>
+              </a>
             </div>
 
             <div class="card card-primary">
@@ -24,36 +25,39 @@
 
                   <div class="form-group">
                     <div class="d-block">
-                    	<label for="password" class="control-label">Password</label>
+                    	<label for="password" class="control-label">Senha</label>
                       <div class="float-right">
-                        <a href="auth-forgot-password.html" class="text-small">
-                          Forgot Password?
+                        <a href="/users/confirmation/new" class="text-small">
+                          Esqueceu a senha?
                         </a>
                       </div>
                     </div>
-                    <input id="password" type="password" class="form-control" name="password" tabindex="2" required>
+                    <%# <input id="password" type="password" class="form-control" name="password" tabindex="2" required>                     %>
+                    <%= f.password_field :password, autocomplete: "current-password", class:"form-control" %>
                     <div class="invalid-feedback">
-                      please fill in your password
+                      Por favor entre com sua senha!
                     </div>
                   </div>
 
                   <div class="form-group">
                     <div class="custom-control custom-checkbox">
-                      <input type="checkbox" name="remember" class="custom-control-input" tabindex="3" id="remember-me">
+                      <%# <input type="checkbox" name="remember" class="custom-control-input" tabindex="3" id="remember-me"> %>
+                      <%= f.check_box :remember_me, class:"custom-control-input" %>
                       <label class="custom-control-label" for="remember-me">Remember Me</label>
                     </div>
                   </div>
 
                   <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4">
+                  <%= f.submit "Login", class:"btn btn-primary btn-lg btn-block" %>
+                    <%# <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4">
                       Login
-                    </button>
+                    </button> %>
                   </div>
                 <% end %>
               </div>
             </div>
             <div class="mt-5 text-muted text-center">
-              Você não tem uma conta? <a href="auth-register.html">Create One</a>
+              Você não tem uma conta? <a href="/users/sign_up">Crie Uma</a>
             </div>
             <div class="simple-footer">
               Copyright &copy; Fabio Nogueira 2022
@@ -63,5 +67,3 @@
       </div>
     </section>
   </div>
-
-<%= render "devise/shared/links" %>
