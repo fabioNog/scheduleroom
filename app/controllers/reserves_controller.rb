@@ -13,7 +13,7 @@ class ReservesController < ApplicationController
 
   # GET /reserves/new
   def new
-    @reserf = Reserve.new
+    @reserf = current_user.reserves.new
   end
 
   # GET /reserves/1/edit
@@ -22,7 +22,7 @@ class ReservesController < ApplicationController
 
   # POST /reserves or /reserves.json
   def create
-    @reserf = Reserve.new(reserf_params)
+    @reserf = current_user.reserves.new(reserf_params)
 
     respond_to do |format|
       if @reserf.save
