@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "start": "yarn install",
+    "test": "(eslint lib || true) && jest"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.7.2",
     "@rails/webpacker": "5.4.3",
@@ -17,7 +21,6 @@
     "datatables.net-select-bs4": "^1.2.7",
     "dropzone": "^5.5.1",
     "flag-icon-css": "^3.2.1",
-    "fullcalendar": "3.10.1",
     "gmaps": "^0.4.24",
     "ionicons201": "1.0.0",
     "izitoast": "^1.4.0",
