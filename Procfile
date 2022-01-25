@@ -1,5 +1,5 @@
 release: rails db:migrate
-
+release bin/rails webpacker:install
 web: bundle exec puma -t 5:5 -p ${PORT:-4000} -e ${RACK_ENV:-development}
 
 wp-client: HMR=true RAILS_ENV=development NODE_ENV=development bin/webpack-dev-server
