@@ -79,4 +79,6 @@ gem "pg", "~> 1.2", :group => :production
 
 gem "devise", "~> 4.8"
 
+gem "webpacker"
+
 
