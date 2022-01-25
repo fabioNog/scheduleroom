@@ -5,6 +5,9 @@ import "controllers"
 
 import './stisla.js'
 
+import './fullcalendar.js'
+import './modules-calendar.js'
+
 
 //= require stisla
 //= require scripts
