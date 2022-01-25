@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "yarn install",
+    "start": "webpack-dev-server --mode development",
     "test": "(eslint lib || true) && jest"
   },
   "dependencies": {
